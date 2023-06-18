@@ -8,9 +8,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder/',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+  },
+  {
+    path: 'folder/imagem',
+    loadChildren: () => import('./folder/imagem/imagem.module').then( m => m.ImagemPageModule)
+  },
+  {
+    path: 'folder/particao1',
+    loadChildren: () => import('./folder/particao1/particao1.module').then( m => m.Particao1PageModule)
+  },
+  {
+    path: 'folder/processo1',
+    loadChildren: () => import('./folder/processo1/processo1.module').then( m => m.Processo1PageModule)
+  },
+
 ];
 
 @NgModule({

@@ -7,6 +7,18 @@ const routes: Routes = [
   {
     path: '',
     component: FolderPage
+  },
+  {
+    path: 'imagem',
+    loadChildren: () => import('./imagem/imagem.module').then( m => m.ImagemPageModule)
+  },
+  {
+    path: 'particao1',
+    loadChildren: () => import('./particao1/particao1.module').then( m => m.Particao1PageModule)
+  },
+  {
+    path: 'processo1',
+    loadChildren: () => import('./processo1/processo1.module').then( m => m.Processo1PageModule)
   }
 ];
 
