@@ -1,0 +1,7 @@
+{
+  "name": "dashboardb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
