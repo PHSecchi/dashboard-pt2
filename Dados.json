@@ -1,0 +1,24 @@
+{
+    "Particoes": [
+        {
+            "Part:": "/dev/sdb1",
+            "Tamanho:": "286M"
+        },
+        {
+            "Part:": "/dev/sdb2",
+            "Tamanho:": "8G"
+        },
+        {
+            "Part:": "/dev/sdb3",
+            "Tamanho:": "230.2G"
+        },
+        {
+            "Part:": "/dev/sda1",
+            "Tamanho:": "93.1G"
+        },
+        {
+            "Part:": "/dev/sdc1",
+            "Tamanho:": "698.6G"
+        }
+    ]
+}
