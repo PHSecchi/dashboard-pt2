@@ -1,6 +1,7 @@
 import os
 import subprocess
 import threading
+import datetime
 import time
 import json
 
@@ -32,8 +33,7 @@ def aquisicao_dados_processos():
     processos = []
     for p in os.listdir('/proc'):
         if p.isdigit():
-            obter_arquivos_em_uso(p)
-            processos.append({"Processo_"+p : obter_arquivos_em_uso(p)})
+            processos.append(p)
     return processos
 
             
@@ -61,10 +61,33 @@ def obter_arquivos_em_uso(pid):
 
     return arquivos_em_uso
 
+def listar_pastas_e_arquivos(diretorio):
+    conteudo = []
+    for item in os.listdir(diretorio):
+        item_caminho = os.path.join(diretorio, item)
+        if os.path.isdir(item_caminho):
+            arq = {"tipo": "pasta",
+                   "nome": item,
+                   "caminho": item_caminho}
+        else:
+            arq = {"tipo": "arquivo",
+                   "nome": item,
+                   "caminho": item_caminho,
+                   "tamanho": os.path.getsize(item_caminho),# em bytes
+                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho))),
+                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho))),
+                   "perm" : oct(os.stat(item_caminho).st_mode)[-3:]}
+        conteudo.append(arq)
+    return conteudo
+
 def grava_dados():
+    diretorio = "/home/phsecchi/GitHub/dashboardb"
+    pid = aquisicao_dados_processos()[-1]
     while True:
         Dados = {"Particoes": obter_informacoes_particoes(),
-                 "Processos": aquisicao_dados_processos()
+                 "Processos": aquisicao_dados_processos(),
+                 "ArqProcess": obter_arquivos_em_uso(pid),
+                 "PastaArq" : listar_pastas_e_arquivos(diretorio),
                 }
         #Escreve Dados em um arquivo JSON       
         with open("Dados.json","w") as arquivo:
