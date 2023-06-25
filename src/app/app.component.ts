@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import dados from "./../../Dados.json";
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  part = dados.Particoes
+  proc = dados.Processos
+  arproc = dados.ArqProcess
+  pasta = dados.PastaArq
+
   public appPages = [
     { title: 'Pasta', url: '/folder/Nome da Pasta', icon: 'folder-open' },
     { title: 'Arquivo', url: '/folder/Nome do aquivo', icon: 'document' },
@@ -14,10 +21,12 @@ export class AppComponent {
 
   public appProcessos= [
     { title: 'Processo Entrada', url: '/folder/processo1', icon: 'arrow-forward' },
-    { title: 'Processo Saída', url: '/folder/processo2', icon: 'arrow-back' },
+    
   ];
 
-  
+  iconPart = 'disc'
+  urlPart = '/folder/particao1'
+
   public appParticoes = [
     { title: 'Partição 1', url: '/folder/particao1', icon: 'disc' },
     { title: 'Partição 2', url: '/folder/particao2', icon: 'disc' },
@@ -26,4 +35,8 @@ export class AppComponent {
 
   public labels = [];
   constructor() {}
+  
+  onClick(p){
+    console.log(p)
+  }
 }

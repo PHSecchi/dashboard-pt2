@@ -22,7 +22,7 @@ def obter_informacoes_particoes():
 
             # Extração das informações desejadas
             particao_info = linha.split()
-            informacoes = "Part" + particao_info[0] + "Tamanho" + particao_info[4]
+            informacoes = {"Part" : particao_info[0],  "Tamanho" : particao_info[4]}
 
             informacoes_particoes.append(informacoes)
 
