@@ -1,5 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import dados from "./../../Dados.json";
+export let exp:any;
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -11,6 +15,7 @@ export class AppComponent {
   proc = dados.Processos
   arproc = dados.ArqProcess
   pasta = dados.PastaArq
+  
 
   public appPages = [
     { title: 'Pasta', url: '/folder/Nome da Pasta', icon: 'folder-open' },
@@ -26,17 +31,24 @@ export class AppComponent {
 
   iconPart = 'disc'
   urlPart = '/folder/particao1'
-
+  
   public appParticoes = [
     { title: 'Partição 1', url: '/folder/particao1', icon: 'disc' },
     { title: 'Partição 2', url: '/folder/particao2', icon: 'disc' },
     { title: 'Partição 3', url: '/folder/particao3', icon: 'disc' },
   ];
-
-  public labels = [];
-  constructor() {}
   
-  onClick(p){
-    console.log(p)
+  public labels = [];
+  constructor() {};
+  
+  onClick(f:any){
+      
+    let exp= f;
+    return exp;
+
   }
 }
+
+// default export (a:object) =>{
+//   exp = a
+// }
