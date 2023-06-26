@@ -10,7 +10,22 @@
   <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-list lines="none">
+        <ion-list id="particoes-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of pasta; let i = index">
+            <div size = "large">
+              <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected" >
+                <ion-label>Nome :{{p.nome}}</ion-label>
+                <!-- <ion-label>Nome :{{p.caminho}}</ion-label> -->
+                <ion-label>Tipo :{{p.tipo}}</ion-label>
+                <ion-label>Tamanho :{{p.tamanho}}</ion-label>
+                <ion-label>Criacao :{{p.dtIns}}</ion-label><ion-label>Modificacao :{{p.dtMod}}</ion-label>
+                <ion-label>Permicoes :{{p.perm}}</ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <!-- <ion-list lines="none">
           <ion-item>
             <ion-label style="font-weight: 600;">Imagem1.png</ion-label>
           </ion-item>
@@ -28,8 +43,7 @@
           </ion-item>
           <ion-item>
             <ion-label>Modificado em: 18/06/2023 11:47:02</ion-label>
-          </ion-item>
-        </ion-list>
+          </ion-item> -->
       </ion-item>
     </ion-card-content>
   </ion-card>

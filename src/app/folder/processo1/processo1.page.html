@@ -13,7 +13,20 @@
   <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-list lines="none">
+
+        <ion-list id="particoes-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of proc; let i = index">
+            <div size = "large">
+              <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected" >
+                <ion-label>PID :{{p.Processo.PID}}</ion-label>
+                <ion-label>Nome :{{p.Processo.Nome}}</ion-label>
+              </ion-item>
+            </div>
+          </ion-menu-toggle>
+        </ion-list>
+
+
+        <!-- <ion-list lines="none">
           <ion-item>
             <ion-label style="font-weight: 600;">Processo 1</ion-label>
           </ion-item>
@@ -23,7 +36,7 @@
           <ion-item>
             <ion-label>Informações</ion-label>
           </ion-item>
-        </ion-list>
+        </ion-list> -->
       </ion-item>
     </ion-card-content>
   </ion-card>

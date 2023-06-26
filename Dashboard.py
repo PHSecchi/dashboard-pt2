@@ -34,8 +34,26 @@ def aquisicao_dados_processos():
     for p in os.listdir('/proc'):
         if p.isdigit():
             processos.append(p)
-    return processos
 
+    proc = []
+    #Abre o arquivo "status" de todos os processos e retira as informacoes necessaria 
+    for id_proc in processos:
+        with open(f"/proc/{id_proc}/status", 'r') as arquivo:
+            status = arquivo.readlines()
+            memo = 0
+        #Percorre o arquivo status de cada processo procurando pelas informacoe necessarias
+        for s in status:
+            if s.startswith('Pid:'):
+                pid = s.split('\t')[1].strip() 
+            if s.startswith('Name:'):
+                name = s.split('\t')[1].strip() 
+            
+        processo = {"PID": pid,
+                    "Nome": name}
+        
+        proc.append ({"Processo": processo})
+
+    return proc
             
 def obter_arquivos_em_uso(pid):
     arquivos_em_uso = []
@@ -68,14 +86,18 @@ def listar_pastas_e_arquivos(diretorio):
         if os.path.isdir(item_caminho):
             arq = {"tipo": "pasta",
                    "nome": item,
-                   "caminho": item_caminho}
+                   "caminho": item_caminho,
+                   "tamanho": os.path.getsize(item_caminho),# em bytes
+                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho)).date()),
+                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho)).date()),
+                   "perm" : oct(os.stat(item_caminho).st_mode)[-3:]}
         else:
             arq = {"tipo": "arquivo",
                    "nome": item,
                    "caminho": item_caminho,
                    "tamanho": os.path.getsize(item_caminho),# em bytes
-                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho))),
-                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho))),
+                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho)).date()),
+                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho)).date()),
                    "perm" : oct(os.stat(item_caminho).st_mode)[-3:]}
         conteudo.append(arq)
     return conteudo
@@ -94,7 +116,7 @@ def grava_dados():
             json.dump(Dados,arquivo,indent= 4)
         
         #Aguarda 5 seg
-        time.sleep(5)
+        time.sleep(10)
 
 #Define a thread e inicia
 thr_aq_dados = threading.Thread(target= grava_dados)
