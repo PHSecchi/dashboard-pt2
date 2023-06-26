@@ -27,10 +27,10 @@
         <ion-list id="particoes-list">
           <ion-list-header>Partições</ion-list-header>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of part; let i = index">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appParticoes; let i = index">
             <ion-item routerDirection="root" [routerLink]="[urlPart]" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon aria-hidden="true" slot="start" [ios]="iconPart + '-outline'" [md]="iconPart + '-sharp'" (click) = "onClick(i)"></ion-icon>
-              <ion-label>{{ p.Part }}</ion-label>
+              <ion-label>Lista de Partições</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
