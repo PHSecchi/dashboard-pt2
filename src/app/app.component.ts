@@ -23,7 +23,7 @@ export class AppComponent{
   ];
 
   public appProcessos= [
-    { title: 'Lista de processos', url: '/folder/', icon: 'list'},
+    { title: 'Lista de processos', url: '/folder/processo1', icon: 'list'},
     { title: 'Detalhes do processo', url: '/folder/processo2', icon: 'search' },
     
   ];
