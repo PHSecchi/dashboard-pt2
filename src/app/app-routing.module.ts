@@ -23,7 +23,10 @@ const routes: Routes = [
     path: 'folder/processo1',
     loadChildren: () => import('./folder/processo1/processo1.module').then( m => m.Processo1PageModule)
   },
-
+  {
+    path: 'folder/processo2',
+    loadChildren: () => import('./folder/processo2/processo2.module').then( m => m.Processo2PageModule)
+  },
 ];
 
 @NgModule({

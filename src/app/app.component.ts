@@ -23,7 +23,7 @@ export class AppComponent{
   ];
 
   public appProcessos= [
-    { title: 'Lista de processos', url: '/folder/processo1', icon: 'list'},
+    { title: 'Lista de processos', url: '/folder/', icon: 'list'},
     { title: 'Detalhes do processo', url: '/folder/processo2', icon: 'search' },
     
   ];
@@ -33,9 +33,7 @@ export class AppComponent{
 
   
   public appParticoes = [
-    { title: 'Partição 1', url: '/folder/particao1', icon: 'disc' },
-    { title: 'Partição 2', url: '/folder/particao2', icon: 'disc' },
-    { title: 'Partição 3', url: '/folder/particao3', icon: 'disc' },
+    { title: 'Listar partições', url: '/folder/particao1', icon: 'disc' },
   ];
   
   public labels = [];

@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'processo1',
     loadChildren: () => import('./processo1/processo1.module').then( m => m.Processo1PageModule)
+  },
+  {
+    path: 'processo2',
+    loadChildren: () => import('./processo2/processo2.module').then( m => m.Processo2PageModule)
   }
 ];
 
