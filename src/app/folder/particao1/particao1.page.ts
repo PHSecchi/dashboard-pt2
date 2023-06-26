@@ -16,7 +16,6 @@ export class Particao1Page implements OnInit {
   ngOnInit() {
   }
   onClick(){
-    console.log("Banana!!!")
     console.log(this.teste)
   }
   

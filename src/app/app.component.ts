@@ -2,28 +2,29 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import dados from "./../../Dados.json";
 export let exp:any;
 
-exp = 1;
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent{
   part = dados.Particoes
   proc = dados.Processos
   arproc = dados.ArqProcess
   pasta = dados.PastaArq 
-
+  exp:any;
 
   public appPages = [
-    { title: 'Pasta', url: '/folder/Nome da Pasta', icon: 'folder-open' },
-    { title: 'Arquivo', url: '/folder/Nome do aquivo', icon: 'document' },
-    { title: 'Imagem', url: '/folder/imagem', icon: 'image' },
-    { title: 'Áudio', url: '/folder/musica', icon: 'musical-note' },
+    // { title: 'Pasta', url: '/folder/Nome da Pasta', icon: 'folder-open' },
+    // { title: 'Arquivo', url: '/folder/Nome do aquivo', icon: 'document' },
+    { title: 'Lista de arquivos', url: '/folder/imagem', icon: 'document' },
+    // { title: 'Áudio', url: '/folder/musica', icon: 'musical-note' },
   ];
 
   public appProcessos= [
-    { title: 'Processo Entrada', url: '/folder/processo1', icon: 'arrow-forward' },
+    { title: 'Lista de processos', url: '/folder/processo1', icon: 'list'},
+    { title: 'Detalhes do processo', url: '/folder/processo2', icon: 'search' },
     
   ];
 
@@ -41,17 +42,20 @@ export class AppComponent {
   constructor() {
   };
   
-  public onClick(f:any){
+  // public onClick(f:any){
       
-    let exp= f;
-    console.log(exp);
-    return exp;
-  
+  //   let exp= f;
+  //   console.log(exp);
+  //   return exp;
 
+  // }
+
+  public onClick(f: any) {
+    this.exp = f; // Atribuir valor a this.exp em vez de exp
+    console.log(this.exp);
+    return this.exp;
   }
 
-
-  
 }
 
 // default export (a:object) =>{
