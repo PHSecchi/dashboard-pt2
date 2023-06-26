@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>processo1</ion-title>
+    <ion-title>Lista de processos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,8 +18,7 @@
           <ion-menu-toggle auto-hide="false" *ngFor="let p of proc; let i = index">
             <div size = "large">
               <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected" >
-                <ion-label>PID :{{p.Processo.PID}}</ion-label>
-                <ion-label>Nome :{{p.Processo.Nome}}</ion-label>
+                <ion-label><br><b>PID: {{p.Processo.PID}}</b><br>Nome: {{p.Processo.Nome}}</ion-label>
               </ion-item>
             </div>
           </ion-menu-toggle>

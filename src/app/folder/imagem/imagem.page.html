@@ -14,12 +14,13 @@
           <ion-menu-toggle auto-hide="false" *ngFor="let p of pasta; let i = index">
             <div size = "large">
               <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected" >
-                <ion-label>Nome :{{p.nome}}</ion-label>
-                <!-- <ion-label>Nome :{{p.caminho}}</ion-label> -->
-                <ion-label>Tipo :{{p.tipo}}</ion-label>
-                <ion-label>Tamanho :{{p.tamanho}}</ion-label>
+                <ion-item>
+                <ion-label><br><b>Nome: {{p.nome}} </b> <br>Tipo: {{p.tipo}} <br> Tamanho: {{p.tamanho}} bytes <br> Criacao: {{p.dtIns}} <br> Permicoes: {{p.perm}} <hr></ion-label>
+                <!-- <ion-label>Tipo :{{p.tipo}}</ion-label> -->
+                <!-- <ion-label>Tamanho :{{p.tamanho}}</ion-label>
                 <ion-label>Criacao :{{p.dtIns}}</ion-label><ion-label>Modificacao :{{p.dtMod}}</ion-label>
-                <ion-label>Permicoes :{{p.perm}}</ion-label>
+                <ion-label>Permicoes :{{p.perm}}</ion-label> -->
+              </ion-item>
               </ion-item>
             </div>
           </ion-menu-toggle>
