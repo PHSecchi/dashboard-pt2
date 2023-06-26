@@ -7,34 +7,36 @@ import json
 
 
 def obter_informacoes_particoes():
-    informacoes_particoes = []
+    info_part = []
     comando = "sudo fdisk -l"
 
     # Executar o comando e capturar a saída
-    resultado = subprocess.run(comando, shell=True, capture_output=True, text=True)
-    saida = resultado.stdout
-
+    retorno = subprocess.run(comando, shell=True, capture_output=True, text=True).stdout
+    
     # Processar a saída do comando
-    linhas = saida.split('\n')
+    linhas = retorno.split('\n')
     for linha in linhas:
         if linha.startswith('/dev/sd'):
             informacoes = {}
 
-            # Extração das informações desejadas
-            particao_info = linha.split()
-            informacoes = {"Part" : particao_info[0],  "Tamanho" : particao_info[4]}
+            # Extração das informações
+            part_info = linha.split()
+            informacoes = {"Part" : part_info[0],  "Tamanho" : part_info[4]}
 
-            informacoes_particoes.append(informacoes)
+            info_part.append(informacoes)
 
-    return informacoes_particoes
+    return info_part
 
-def aquisicao_dados_processos():
-    # Carrega todos os diretorios que tem como nome um numero inteiro, ou seja, sao diretorios de processos
+def aquisicao_nr_processos ():
     processos = []
     for p in os.listdir('/proc'):
         if p.isdigit():
             processos.append(p)
+    return processos
 
+def aquisicao_dados_processos():
+    # Carrega todos os diretorios que tem como nome um numero inteiro, ou seja, sao diretorios de processos
+    processos = aquisicao_nr_processos()
     proc = []
     #Abre o arquivo "status" de todos os processos e retira as informacoes necessaria 
     for id_proc in processos:
@@ -82,29 +84,29 @@ def obter_arquivos_em_uso(pid):
 def listar_pastas_e_arquivos(diretorio):
     conteudo = []
     for item in os.listdir(diretorio):
-        item_caminho = os.path.join(diretorio, item)
-        if os.path.isdir(item_caminho):
+        caminho_item = os.path.join(diretorio, item)
+        if os.path.isdir(caminho_item):
             arq = {"tipo": "pasta",
                    "nome": item,
-                   "caminho": item_caminho,
-                   "tamanho": os.path.getsize(item_caminho),# em bytes
-                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho)).date()),
-                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho)).date()),
-                   "perm" : oct(os.stat(item_caminho).st_mode)[-3:]}
+                   "caminho": caminho_item,
+                   "tamanho": os.path.getsize(caminho_item),# em bytes
+                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(caminho_item)).date()),#data de criacao    
+                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(caminho_item)).date()),#data de modificacao
+                   "perm" : oct(os.stat(caminho_item).st_mode)[-3:]}
         else:
             arq = {"tipo": "arquivo",
                    "nome": item,
-                   "caminho": item_caminho,
-                   "tamanho": os.path.getsize(item_caminho),# em bytes
-                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(item_caminho)).date()),
-                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(item_caminho)).date()),
-                   "perm" : oct(os.stat(item_caminho).st_mode)[-3:]}
+                   "caminho": caminho_item,
+                   "tamanho": os.path.getsize(caminho_item),# em bytes
+                   "dtIns" : str(datetime.datetime.fromtimestamp(os.path.getctime(caminho_item)).date()),#data de criacao    
+                   "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(caminho_item)).date()),#data de modificacao
+                   "perm" : oct(os.stat(caminho_item).st_mode)[-3:]}
         conteudo.append(arq)
     return conteudo
 
 def grava_dados():
-    diretorio = "/home/phsecchi/GitHub/dashboardb"
-    pid = aquisicao_dados_processos()[-1]
+    diretorio = "/home/phsecchi/Untitled Folder/dashboardb" # pasta inicial para aquisicao de dados
+    pid = aquisicao_nr_processos()[-1] # por default ele adquire os dados do processo com o maior pid
     while True:
         Dados = {"Particoes": obter_informacoes_particoes(),
                  "Processos": aquisicao_dados_processos(),

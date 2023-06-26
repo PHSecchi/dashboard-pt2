@@ -10,4 +10,24 @@
       <ion-title size="large">processo2</ion-title>
     </ion-toolbar>
   </ion-header>
+<ion-card>
+  <ion-card-content>
+    <ion-item>
+      <ion-list id="particoes-list">
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of detProcess; let i = index">
+          <div size = "large">
+            <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected" >
+              <ion-label>Nome :{{p.nome}}</ion-label>
+              <ion-label>PID :{{p.pid}}</ion-label>
+              <ion-label>Tipo :{{p.tipo}}</ion-label>
+              <ion-label>Usuario :{{p.usuario}}</ion-label>
+              <ion-label>Dispositivo :{{p.dispositivo}}</ion-label>
+
+            </ion-item>
+          </div>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
 </ion-content>
