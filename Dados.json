@@ -924,12 +924,6 @@
         },
         {
             "Processo": {
-                "PID": "2099",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "2114",
                 "Nome": "flatpak-session"
             }
@@ -960,110 +954,14 @@
         },
         {
             "Processo": {
-                "PID": "2136",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2137",
-                "Nome": "xdg-dbus-proxy"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2139",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2140",
-                "Nome": "github-desktop"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2143",
-                "Nome": "cat"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2144",
-                "Nome": "cat"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2147",
-                "Nome": "flatpak-portal"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2153",
-                "Nome": "github-desktop"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2155",
-                "Nome": "zypak-sandbox"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2157",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2164",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2165",
-                "Nome": "xdg-dbus-proxy"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2169",
-                "Nome": "bwrap"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2170",
-                "Nome": "github-desktop"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "2209",
                 "Nome": "xdg-desktop-por"
             }
         },
         {
             "Processo": {
-                "PID": "2211",
-                "Nome": "github-desktop"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "2222",
                 "Nome": "xdg-desktop-por"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2234",
-                "Nome": "github-desktop"
             }
         },
         {
@@ -1076,18 +974,6 @@
             "Processo": {
                 "PID": "2239",
                 "Nome": "pxgsettings"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2252",
-                "Nome": "github-desktop"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "2265",
-                "Nome": "p11-kit-remote"
             }
         },
         {
@@ -1146,12 +1032,6 @@
         },
         {
             "Processo": {
-                "PID": "3371",
-                "Nome": "xed"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "4055",
                 "Nome": "gvfsd-http"
             }
@@ -1159,12 +1039,6 @@
         {
             "Processo": {
                 "PID": "4234",
-                "Nome": "Isolated Web Co"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "4531",
                 "Nome": "Isolated Web Co"
             }
         },
@@ -1338,18 +1212,6 @@
         },
         {
             "Processo": {
-                "PID": "18197",
-                "Nome": "bash"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "61117",
-                "Nome": "Isolated Web Co"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "61150",
                 "Nome": "Web Content"
             }
@@ -1364,12 +1226,6 @@
             "Processo": {
                 "PID": "61608",
                 "Nome": "Web Content"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "64680",
-                "Nome": "kworker/1:1-events"
             }
         },
         {
@@ -1392,42 +1248,6 @@
         },
         {
             "Processo": {
-                "PID": "65695",
-                "Nome": "kworker/3:1-events"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "65696",
-                "Nome": "kworker/3:3-events"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "65741",
-                "Nome": "kworker/1:0-cgroup_destroy"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "65763",
-                "Nome": "kworker/u16:42-iwlwifi"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "65795",
-                "Nome": "irq/31-mei_me"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "65796",
-                "Nome": "kworker/2:0-events"
-            }
-        },
-        {
-            "Processo": {
                 "PID": "66053",
                 "Nome": "cupsd"
             }
@@ -1436,24 +1256,6 @@
             "Processo": {
                 "PID": "66054",
                 "Nome": "cups-browsed"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "66057",
-                "Nome": "kworker/0:2-events"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "66254",
-                "Nome": "kworker/2:3-events"
-            }
-        },
-        {
-            "Processo": {
-                "PID": "66492",
-                "Nome": "kworker/u17:1-rb_allocator"
             }
         },
         {
@@ -1488,44 +1290,296 @@
         },
         {
             "Processo": {
-                "PID": "68166",
-                "Nome": "kworker/u17:2-rb_allocator"
+                "PID": "79191",
+                "Nome": "kworker/3:0-events"
             }
         },
         {
             "Processo": {
-                "PID": "69823",
-                "Nome": "kworker/u16:1-phy0"
+                "PID": "79292",
+                "Nome": "code"
             }
         },
         {
             "Processo": {
-                "PID": "70222",
+                "PID": "87595",
+                "Nome": "kworker/3:2-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "87596",
+                "Nome": "kworker/2:0-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "87597",
+                "Nome": "kworker/2:2-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "88355",
+                "Nome": "kworker/1:2-mm_percpu_wq"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "88356",
+                "Nome": "kworker/1:3-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "88445",
+                "Nome": "kworker/0:3-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "88775",
+                "Nome": "irq/31-mei_me"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "90963",
+                "Nome": "bash"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "90986",
                 "Nome": "sudo"
             }
         },
         {
             "Processo": {
-                "PID": "70223",
+                "PID": "91005",
                 "Nome": "python3"
             }
         },
         {
             "Processo": {
-                "PID": "73197",
-                "Nome": "kworker/u16:2-iwlwifi"
+                "PID": "92171",
+                "Nome": "kworker/u16:0-flush-8:0"
             }
         },
         {
             "Processo": {
-                "PID": "76322",
-                "Nome": "kworker/u16:0"
+                "PID": "94428",
+                "Nome": "kworker/u16:1-phy0"
             }
         },
         {
             "Processo": {
-                "PID": "76547",
-                "Nome": "kworker/u17:0-i915_flip"
+                "PID": "96660",
+                "Nome": "kworker/u17:0-rb_allocator"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "99409",
+                "Nome": "kworker/u16:3-ext4-rsv-conversion"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "100789",
+                "Nome": "kworker/u17:1-i915_flip"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "102780",
+                "Nome": "kworker/u17:2"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103375",
+                "Nome": "cinnamon-settin"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103456",
+                "Nome": "kworker/1:0-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103457",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103465",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103466",
+                "Nome": "xdg-dbus-proxy"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103468",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103469",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103472",
+                "Nome": "cat"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103473",
+                "Nome": "cat"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103476",
+                "Nome": "flatpak-portal"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103482",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103484",
+                "Nome": "zypak-sandbox"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103486",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103494",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103495",
+                "Nome": "xdg-dbus-proxy"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103499",
+                "Nome": "bwrap"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103500",
+                "Nome": "kworker/0:1-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103501",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103503",
+                "Nome": "kworker/0:2-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103550",
+                "Nome": "kworker/u16:2-flush-8:0"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103580",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103608",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103619",
+                "Nome": "github-desktop"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103664",
+                "Nome": "p11-kit-remote"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103672",
+                "Nome": "kworker/u16:4-iwlwifi"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103673",
+                "Nome": "kworker/u16:5-ext4-rsv-conversion"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103674",
+                "Nome": "kworker/u16:6-ext4-rsv-conversion"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103704",
+                "Nome": "kworker/2:1-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103712",
+                "Nome": "kworker/3:1-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103713",
+                "Nome": "kworker/3:3-events"
+            }
+        },
+        {
+            "Processo": {
+                "PID": "103761",
+                "Nome": "kworker/1:1-events"
             }
         }
     ],
@@ -1534,133 +1588,133 @@
             "nome": "Folder/dashboardb",
             "tipo": "DIR",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/",
             "tipo": "DIR",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/bin/python3.9",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/locale/locale-archive",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libc-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libz.so.1.2.11",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libexpat.so.1.6.12",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libm-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libutil-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libdl-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/libpthread-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "/usr/lib/x86_64-linux-gnu/ld-2.31.so",
             "tipo": "REG",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
-            "nome": "/dev/pts/2",
+            "nome": "/dev/pts/1",
             "tipo": "CHR",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
-            "nome": "/dev/pts/2",
+            "nome": "/dev/pts/1",
             "tipo": "CHR",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
-            "nome": "/dev/pts/2",
+            "nome": "/dev/pts/1",
             "tipo": "CHR",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "pipe",
             "tipo": "FIFO",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         },
         {
             "nome": "pipe",
             "tipo": "FIFO",
             "usuario": "root",
-            "pid": "70223",
+            "pid": "91005",
             "dispositivo": "python3"
         }
     ],
@@ -1759,7 +1813,7 @@
             "tipo": "arquivo",
             "nome": "Dados.json",
             "caminho": "/home/phsecchi/Untitled Folder/dashboardb/Dados.json",
-            "tamanho": 43665,
+            "tamanho": 44993,
             "dtIns": "2023-06-26",
             "dtMod": "2023-06-26",
             "perm": "644"
@@ -1786,7 +1840,7 @@
             "tipo": "arquivo",
             "nome": "Dashboard.py",
             "caminho": "/home/phsecchi/Untitled Folder/dashboardb/Dashboard.py",
-            "tamanho": 4606,
+            "tamanho": 5010,
             "dtIns": "2023-06-26",
             "dtMod": "2023-06-26",
             "perm": "644"

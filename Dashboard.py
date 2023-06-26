@@ -102,6 +102,15 @@ def listar_pastas_e_arquivos(diretorio):
                    "dtMod" : str(datetime.datetime.fromtimestamp(os.path.getmtime(caminho_item)).date()),#data de modificacao
                    "perm" : oct(os.stat(caminho_item).st_mode)[-3:]}
         conteudo.append(arq)
+         # PERMICOES
+        # 0: Sem permissao de leitura, gravacao ou execucao.
+        # 1: Permissao de execucao apenas.
+        # 2: Permissao de gravacao apenas.
+        # 3: Permissao de gravacao e execucao.
+        # 4: Permissao de leitura apenas.
+        # 5: Permissao de leitura e execucao.
+        # 6: Permissao de leitura e gravacao.
+        # 7: Permissao de leitura, gravacao e execucao
     return conteudo
 
 def grava_dados():
