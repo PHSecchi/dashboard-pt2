@@ -114,7 +114,7 @@ def listar_pastas_e_arquivos(diretorio):
     return conteudo
 
 def grava_dados():
-    diretorio = "/home/phsecchi/Untitled Folder/dashboardb" # pasta inicial para aquisicao de dados
+    diretorio = "/home/user/Untitled Folder/dashboardb" # pasta inicial para aquisicao de dados
     pid = aquisicao_nr_processos()[-1] # por default ele adquire os dados do processo com o maior pid
     while True:
         Dados = {"Particoes": obter_informacoes_particoes(),
